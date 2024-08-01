@@ -2,6 +2,7 @@ import Learning_useState from "./1_useState/learningHook";
 import Learning2_useState from "./1_useState/learningHook2";
 import Learning3_useState from "./1_useState/learningHook3";
 import Learning4_useState from "./1_useState/learningHook4";
+import Learning5_useState from "./1_useState/learningHook5";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Learning2_useState/>
       <Learning3_useState/>
       <Learning4_useState/>
+      <Learning5_useState/>
     </div>
   );
 }
