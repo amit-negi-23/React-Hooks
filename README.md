@@ -54,8 +54,8 @@ the user interface when state changes.
 
 1) Whenever we call useState hook , it returns an array of two elements: the current state value and a function to update that state.
 
-First Value - State Variable
-Second Value - setter Function 
+   First Value - State Variable 
+   Second Value - setter Function 
 
 2) default value of state variable -- undefined
 
