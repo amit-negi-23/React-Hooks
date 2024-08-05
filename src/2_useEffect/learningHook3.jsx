@@ -3,16 +3,17 @@ import React, { useEffect, useState } from "react";
 export default function Learning3_useEffect() {
   const [deviceWidth, setDeviceWidth] = useState(window.screen.width);
 
-  const currentWidth = () => {
+  const handleResize = () => {
+    console.log("Window resized: ",window.innerWidth )
     setDeviceWidth(window.innerWidth);
   };
 
   useEffect(() => {
-    window.addEventListener("resize", currentWidth);
+    window.addEventListener("resize", handleResize);
 
     return () => {
-      console.log("old event removed");
-      window.removeEventListener("resize", currentWidth);
+      console.log("resize event removed");
+      window.removeEventListener("resize", handleResize);
     };
   }, [deviceWidth]);
 
