@@ -60,3 +60,31 @@ the user interface when state changes.
 2) default value of state variable -- undefined
 
 3) if you want to set initial value of state variable you need to pass initial value as an argument inside useState hook.
+
+
+
+# 2: useEffect()
+The useEffect Hook allows you to perform side effect in your components.
+
+## Some exaple of side effects are:
+1) Fetching data from Api
+2) Directly updating the DOM.
+3) Timer like setTimeout and setInterval 
+
+## Key Points 
+useEffect hook takes two arguments:
+1) Callback function :  A function that contains the code for the side effect. 
+2) Dependency Array : An optional array of dependencies that determine when the effect should be re-run.
+
+## Dependency Array
+1) No Array: The effect runs after every render.
+2) Empty Array ([]): The effect runs only once, when the component mounts, and the cleanup function (if provided) runs when the component unmounts.
+3) Array with Dependencies: The effect runs only when one of the dependencies has changed.
+
+## Cleanup Function
+The function returned by the effect function is the cleanup function. It's executed before the component unmounts and before the effect runs again on subsequent renders.
+
+The cleanup function in the useEffect hook is used to clean up side effects to prevent memory leaks and other issues. It is executed in two main scenarios:
+
+1) Before the component unmounts: This is useful for cleaning up any persistent side effects like subscriptions or timers.
+2) Before the effect runs again: If the effect has dependencies and those dependencies change, the cleanup function runs before the effect is re-executed.
