@@ -1,9 +1,10 @@
+import Learning_useEffect from "./2_useEffect/learningHook";
 import "./App.css";
 
 function App() {
   return (
     <div className="container">
-        <h1>Hello World!</h1>
+        <Learning_useEffect/>
     </div>
   );
 }

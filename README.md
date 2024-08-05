@@ -40,3 +40,13 @@ useCallback
 useContext
 useReducer
 useLayoutEffect
+
+
+
+# 2: useEffect()
+The useEffect Hook allows you to perform side effect in your components.
+
+## Some exaple of side effects are:
+1) Fetching data from Api
+2) Directly updating the DOM.
+3) Timer like setTimeout and setInterval 
