@@ -52,3 +52,12 @@ useRef hook return an object with single a property, current .
 
 
 useRef is a React hook that returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object persists for the full lifetime of the component. This hook is primarily used for accessing and interacting with DOM elements directly, storing mutable values that do not cause re-renders when updated, and maintaining values across renders without causing re-renders.
+
+function MyComponent() {
+  // ...
+  // 🚩 Don't write a ref during rendering
+  myRef.current = 123;
+  // ...
+  // 🚩 Don't read a ref during rendering
+  return <h1>{myOtherRef.current}</h1>;
+}
