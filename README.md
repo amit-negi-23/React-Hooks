@@ -59,6 +59,6 @@ function MyComponent() {
   myRef.current = 123;  
   // ...  
   // 🚩 Don't read a ref during rendering  
-  return <h1>{myOtherRef.current}</h1>;  
+  return <h6>{myOtherRef.current}</h6>;  
   
 }
