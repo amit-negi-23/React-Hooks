@@ -88,3 +88,28 @@ The cleanup function in the useEffect hook is used to clean up side effects to p
 
 1) Before the component unmounts: This is useful for cleaning up any persistent side effects like subscriptions or timers.
 2) Before the effect runs again: If the effect has dependencies and those dependencies change, the cleanup function runs before the effect is re-executed.
+
+# 3: useRef()
+
+useRef is a React Hook that lets you reference a value that’s not needed for rendering.
+
+useRef hook is used to create reference to dom element and to manupulate it.
+
+useRef hook return an object with a current property .
+
+useRef is a versatile hook that can be useful in various scenarios, from interacting with the DOM to managing mutable state that doesn’t need to trigger a re-render.
+
+useRef is a hook in React that provides a way to persistently store a mutable value across renders. It is primarily used to access and interact with DOM elements directly, but it can also be used to keep track of mutable values without causing re-renders.
+
+useRef is a React hook that returns a mutable ref object whose .current property is initialized to the passed argument (initialValue). The returned object persists for the full lifetime of the component. This hook is primarily used for accessing and interacting with DOM elements directly, storing mutable values that do not cause re-renders when updated, and maintaining values across renders without causing re-renders.
+
+function MyComponent() {  
+  // ...  
+  // 🚩 Don't write a ref during rendering  
+  myRef.current = 123;  
+  // ...  
+  // 🚩 Don't read a ref during rendering  
+  return <span>{myOtherRef.current}</span>;  
+}
+
+### Note : Sometimes, you may want to let the parent component manipulate the DOM inside of your component. For example, maybe you’re writing a MyInput component, but you want the parent to be able to focus the input (which the parent has no access to). You can use a combination of useRef to hold the input and forwardRef to expose it to the parent component.
