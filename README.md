@@ -40,3 +40,8 @@ useCallback
 useContext
 useReducer
 useLayoutEffect
+
+
+# 4 : useMemo()
+
+The React useMemo hook return a memoized value .(it's like caching a value so that it dosen't need to be recalculated.)

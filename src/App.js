@@ -1,9 +1,10 @@
+import Learning_useMemo from "./4_useMemo/learningHook";
 import "./App.css";
 
 function App() {
   return (
     <div className="container">
-        <h1>Hello World!</h1>
+        <Learning_useMemo/>        
     </div>
   );
 }
