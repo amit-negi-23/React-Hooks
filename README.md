@@ -45,3 +45,8 @@ useLayoutEffect
 # 4 : useMemo()
 
 The React useMemo hook return a memoized value .(it's like caching a value so that it dosen't need to be recalculated.)
+
+## When to Use useMemo
+Expensive Calculations: When you have a calculation that is computationally expensive.
+Re-render Optimization: When you want to prevent unnecessary recalculations on every render.
+Component Props: When passing memoized values to child components to prevent them from re-rendering unnecessarily.
